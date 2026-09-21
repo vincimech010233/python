@@ -13,9 +13,4 @@ def validate_pin(pin):
 """
 
 def validate_pin(pin):
-    if pin == "-":
-        return False
-    # isdigit() verifica si es todo la cadena numerica
-    return (len(pin) == 4 or len(pin) == 6) and pin.isdigit() 
-
-print(validate_pin("-12345"))
+    return len(pin) in (4, 6) and pin.isdigit()
